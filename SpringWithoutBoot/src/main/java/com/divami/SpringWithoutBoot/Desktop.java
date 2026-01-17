@@ -4,15 +4,14 @@ package com.divami.SpringWithoutBoot;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Laptop implements Computer {
+public class Desktop {
 	
 	
-	public Laptop() {
+	public Desktop() {
 		System.out.println("Laptop Constructor");
 	}
 
 
-	@Override
 	public void compile() {
 		System.out.println("Hello im in Laptop");
 		
