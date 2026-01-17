@@ -4,12 +4,14 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="dev" class="com.divami.SpringWithoutBoot.Dev">
+    <!-- byName and byType-->
+    <bean id="dev" class="com.divami.SpringWithoutBoot.Dev" autowire="byType">
     	<!-- <property name="age" value="12"/>  this will use setter -->
     	<!-- <constructor-arg value="14"/> -->
-    	<property name="laptop" ref="lap1"/>
-    	<constructor-arg ref="lap1"/>
+    	<!-- <property name="laptop" ref="lap1"/>
+    	<constructor-arg ref="lap1"/> -->
+     <!--    	<property name="com" ref="lap1"/>  -->
     </bean>
-    <bean id="lap1" class="com.divami.SpringWithoutBoot.Laptop"/>
+    <bean id="com" class="com.divami.SpringWithoutBoot.Laptop" primary="true"/>
+    <bean id="des1" class="com.divami.SpringWithoutBoot.Desktop"/>
 </beans>
